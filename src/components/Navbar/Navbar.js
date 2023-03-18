@@ -35,7 +35,6 @@ function CollapsibleExample() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    
   );
 }
 
