@@ -1,0 +1,51 @@
+.img_hero {
+    background-image: url(../../Assets/Hero/hero.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+  }
+  
+  .logo_style {
+    margin: auto;
+    max-width: 50rem;
+  }
+
+  .animate__zoomInDown{
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+  }
+  
+  
+
+  @media screen and (max-width: 768px) {
+    .img_hero {
+      height: 40vh;
+    }
+
+    .logo_style {
+        margin: auto;
+        max-width: 20rem;
+       
+      }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .img_hero {
+      height: 30vh;
+    }
+
+    .logo_style {
+        margin: auto;
+        max-width: 20rem;
+       
+      }
+  }
+  
+  
