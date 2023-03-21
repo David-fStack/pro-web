@@ -9,7 +9,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 const Seo = () => {
     AOS.init();
     return (
-        <section className='container-fluid pt-5 pb-5 seo-container'>
+        <section className='container-fluid pb-5 seo-container'>
             <div className='row justify-content-center'>
                 <div className='col-md-10'>
                     <div className='seo-content'>
