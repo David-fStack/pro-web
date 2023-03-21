@@ -1,18 +1,22 @@
 .img_hero {
-    background-image: url(../../Assets/Hero/hero.jpeg);
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-  }
+  background-image: url(../../Assets/Hero/hero.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
   
-  .logo_style {
-    margin: auto;
-    max-width: 50rem;
-  }
+}
+
+.logo_style {
+  margin: auto;
+  padding-bottom: 5rem;
+  max-width: 50rem;
+
+}
+
 
   .animate__zoomInDown{
     display: inline-block;
