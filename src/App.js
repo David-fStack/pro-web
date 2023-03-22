@@ -4,7 +4,7 @@ import Footer from './components/Footer/Footer';
 import Hero from './components/Hero/Hero';
 import CollapsibleExample from './components/Navbar/Navbar';
 import Seo from './components/Seo/Seo';
-import Separator from './components/Separator/Separator';
+import WorkTools from './components/WorkTools/WorkTools';
 import WorkProcess from './components/WorkProcess/WorkProcess';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <CollapsibleExample />
       <Hero />
       <Seo />
-      <Separator />
+      <WorkTools />
       <WorkProcess />
       <Footer />
       <Copyright />
