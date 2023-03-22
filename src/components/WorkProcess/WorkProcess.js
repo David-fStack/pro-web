@@ -19,6 +19,7 @@ const WorkProcess = () => {
 
   return (
     <div className="work-process" ref={ref}>
+      <h2 className='mb-3'>Modelo de trabajo</h2>
       <div className="process-list">
         {processes.map((process, index) => (
           <div
