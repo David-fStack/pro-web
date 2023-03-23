@@ -1,0 +1,46 @@
+.separator-container {
+    height: 50vh;
+    background-image: url(../../Assets/Hero/programando2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: height 0.5s ease-in-out;
+  }
+  
+  .separator-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+  }
+
+  .separator-container {
+    background-color: #fff;
+    padding: 50px;
+  }
+  
+  .separator-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .icon {
+    font-size: 5rem;
+    color: #EEEEEE;
+    margin: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .separator-container {
+      height: 60vh;
+    }
+  
+    .icon {
+      font-size: 3rem;
+    }
+  }
+  
+  

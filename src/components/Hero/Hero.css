@@ -1,0 +1,48 @@
+.hero-container {
+    height: 100vh;
+    background-image: url(../../Assets/Hero/hero.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .hero-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+  }
+
+  .logo_style {
+    margin: auto;
+    padding-bottom: 5rem;
+    max-width: 50rem;
+  
+  }
+
+  .animate__animated.animate__backInUp {
+    display: inline;
+    margin: 0 0.5rem;
+  
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .logo_style {
+        margin: auto;
+        max-width: 20rem;
+       
+      }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .logo_style {
+        margin: auto;
+        max-width: 20rem;      
+      }
+  }
+  
