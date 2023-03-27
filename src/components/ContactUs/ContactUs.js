@@ -11,7 +11,7 @@ export const ContactUs = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_zc2chqc', 'template_d7yszhu', form.current, 'ktTFPHBrr6z2YHCTp')
+        emailjs.sendForm('service_vb2qxo4', 'template_zyoxgci', form.current, 'dpVKitEeeIkgi2rmg')
             .then((result) => {
                 alert('Se envio correctamente');
                 form.current.reset();
@@ -52,6 +52,7 @@ export const ContactUs = () => {
                     <Form.Control as="textarea" name='message' rows={3} />
                 </Form.Group>
                 <input className='btn btn-primary mx-5' type="submit" value="Enviar" />
+                
             </Form>
     );
 }
