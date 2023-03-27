@@ -28,8 +28,8 @@ const Footer = () => {
           <div className="col-12 col-xs-12 col-sm-12 col-md-6 text-center">
             <img src={logo} alt="DEVCODEPRO" className="footer-logo mb-3" />
             <p className="text-muted">San Miguel de Tucumán, Argentina</p>
-            <p className="text-muted">Teléfono: +54 (381) 156354150</p>
-            <p className="text-muted">Email: codevpro@gmail.com</p>
+            <p className="text-muted">+54 (381) 156-354150</p>
+            <p className="text-muted">info.codevpro@gmail.com</p>
           </div>
           <div className="col-12 col-md-4 text-center mb-3">
             <h5 className="text-uppercase">Síguenos en</h5>
@@ -41,7 +41,7 @@ const Footer = () => {
                   onMouseLeave={() => handleMouseLeave('facebook')}
                 />
               </a>
-              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/codevpro.i/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram
                   className={iconClass.instagram}
                   onMouseEnter={() => handleMouseEnter('instagram')}
