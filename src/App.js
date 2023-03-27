@@ -6,6 +6,8 @@ import CollapsibleExample from './components/Navbar/Navbar';
 import Seo from './components/Seo/Seo';
 import WorkTools from './components/WorkTools/WorkTools';
 import WorkProcess from './components/WorkProcess/WorkProcess';
+import Services from './components/Services/Services';
+import { ContactUs } from './components/ContactUs/ContactUs';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Seo />
       <WorkTools />
       <WorkProcess />
+      <Services />
+      <ContactUs />
       <Footer />
       <Copyright />
     </div>

@@ -1,0 +1,31 @@
+.parallax {
+  background-image: url(../../Assets/Parallax/programando3.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+
+.text_style_services {
+  color: #EEEEEE;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .text_style_services {
+    font-size: 20px;
+  }
+
+  .parallax {
+    background-image: url(../../Assets/Parallax/programando3.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+  }
+}
