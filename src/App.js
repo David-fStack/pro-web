@@ -8,10 +8,12 @@ import WorkTools from './components/WorkTools/WorkTools';
 import WorkProcess from './components/WorkProcess/WorkProcess';
 import Services from './components/Services/Services';
 import { ContactUs } from './components/ContactUs/ContactUs';
+import WhatsApp from './components/WhatsApp/WhatsApp';
 
 function App() {
   return (
     <div>
+      <WhatsApp />
       <CollapsibleExample />
       <Hero />
       <Seo />
