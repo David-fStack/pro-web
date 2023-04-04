@@ -26,7 +26,9 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-12 col-xs-12 col-sm-12 col-md-6 text-center">
+          <a href="www.codevpro.com">
             <img src={logo} alt="DEVCODEPRO" className="footer-logo mb-3" />
+          </a>
             <p className="text-muted">San Miguel de Tucumán, Argentina</p>
             <p className="text-muted">+54 (381) 156-354150</p>
             <p className="text-muted">info.codevpro@gmail.com</p>
