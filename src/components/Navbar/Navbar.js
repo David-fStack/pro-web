@@ -12,7 +12,7 @@ function CollapsibleExample() {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="#home">
-          <a href="www.codevpro.com">
+          <a href="/">
             <img className='img_logo_style animate__heartBeat' src={logo} alt="logo" />
           </a>
         </Navbar.Brand>
