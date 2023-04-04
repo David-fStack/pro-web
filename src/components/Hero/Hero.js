@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div className="hero-container">
       <div className="hero-content">
-      <img className='logo_style animate__animated animate__backInDown' src={logo} alt="logo" />
+      <img className='logo_style animate__animated animate__backInDown mb-5 ' src={logo} alt="logo" />
 
 
       </div>
