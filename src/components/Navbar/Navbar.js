@@ -12,7 +12,9 @@ function CollapsibleExample() {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="#home">
-          <img className='img_logo_style animate__heartBeat'  src={logo} alt="" />
+          <a href="www.codevpro.com">
+            <img className='img_logo_style animate__heartBeat' src={logo} alt="logo" />
+          </a>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -32,9 +34,9 @@ function CollapsibleExample() {
             </NavDropdown> */}
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">Servicios</Nav.Link>
-            <Nav.Link href="#deets">Sobre Nosotros</Nav.Link>
-            <Nav.Link href="#deets">Contacto</Nav.Link>
+            <Nav.Link href="#services">Servicios</Nav.Link>
+            <Nav.Link href="#aboutas">Sobre Nosotros</Nav.Link>
+            <Nav.Link href="#contact">Contacto</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

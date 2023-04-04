@@ -4,7 +4,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh;
+  height: auto;
 }
 
 .text_style_services {
@@ -13,6 +13,24 @@
   font-weight: bold;
   text-align: center;
   margin: 20px 0;
+}
+
+.card {
+  opacity: 0.85;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+
+.title_ser{
+  font-weight: bold;
+}
+.p_style_text{
+color: #EEEEEE;
 }
 
 @media screen and (max-width: 768px) {
@@ -27,5 +45,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: auto;
+  }
+
+  .card-body {
+    padding: 15px;
   }
 }
