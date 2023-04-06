@@ -58,7 +58,7 @@ const Services = () => {
                         <div className="card h-100 text-wrap">
                             <div className="card-body">
                                 <h3 className='card-title text_style_services'>Mantenimiento e implementación de redes y servidores</h3>
-                                <p className='p_style_text'>Ofrecemos servicios de implementación, configuración y mantenimiento de redes y servidores, garantizando su correcto funcionamiento.</p>
+                                <p className='p_style_text'>Ofrecemos servicios de implementación, configuración, mantenimiento de redes, garantizando su correcto funcionamiento.</p>
                             </div>
                         </div>
                     </div>
