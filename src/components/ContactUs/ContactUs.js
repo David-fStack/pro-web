@@ -1,17 +1,18 @@
 import Form from "react-bootstrap/Form";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import "./ContactUs.css";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
+import { useForm, Controller } from "react-hook-form";
 
 export const ContactUs = () => {
-  const form = useRef();
+  const { register, handleSubmit, control, formState: { errors } } = useForm();
   const [captchaResponse, setCaptchaResponse] = useState(null);
 
-  const sendEmail = (e) => {
+  const sendEmail = async (data, e) => {
     e.preventDefault();
 
     if (!captchaResponse) {
@@ -19,19 +20,19 @@ export const ContactUs = () => {
       return;
     }
 
-    handleRecaptcha(captchaResponse);
+    await handleRecaptcha(captchaResponse);
 
     emailjs
-      .sendForm(
+      .send(
         "service_vb2qxo4",
         "template_zyoxgci",
-        form.current,
-        "dpVKitEeeIkgi2rmg"
+        data,
+        process.env.REACT_APP_EMAILJS_API_KEY
       )
       .then(
         (result) => {
           alert("Se envio correctamente");
-          form.current.reset();
+          e.target.reset();
         },
         (error) => {
           console.log(error.text);
@@ -58,8 +59,7 @@ export const ContactUs = () => {
   return (
     <Form
       className="form_style container mt-4 mb-3 pb-3"
-      ref={form}
-      onSubmit={sendEmail}
+      onSubmit={handleSubmit(sendEmail)}
       action="#"
       id="contact"
       data-aos="flip-left"
@@ -73,8 +73,9 @@ export const ContactUs = () => {
           type="text"
           name="user_name"
           placeholder="Escribe tu Nombre y Apellido"
-          required
+          {...register("user_name", { required: true })}
         />
+        {errors.user_name && <p>Este campo es obligatorio</p>}
       </Form.Group>
 
       <Row className="mb-3">
@@ -84,24 +85,40 @@ export const ContactUs = () => {
             type="email"
             name="user_email"
             placeholder="name@example.com"
-            required
+            {...register("user_email", { required: true })}
           />
+          {errors.user_email && <p>Este campo es obligatorio</p>}
         </Form.Group>
 
         <Form.Group as={Col}>
           <Form.Label>Numero de Celular</Form.Label>
-          <Form.Control
-            type="number"
+          <Controller
             name="cel"
-            placeholder="Ej.: (381) 153-456785"
-            required
+            control={control}
+            defaultValue=""
+            rules={{ required: true }}
+            render={({ field, fieldState: { error } }) => (
+              <Form.Control
+                type="number"
+                placeholder="Ej.: (381) 153-456785"
+                onChange={field.onChange}
+                value={field.value}
+              />
+            )}
           />
+          {errors.cel && <p>Este campo es obligatorio</p>}
         </Form.Group>
       </Row>
 
       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
         <Form.Label>Pon Aqui Tu Consulta</Form.Label>
-        <Form.Control as="textarea" name="message" rows={3} required />
+        <Form.Control
+          as="textarea"
+          name="message"
+          rows={3}
+          {...register("message", { required: true })}
+        />
+        {errors.message && <p>Este campo es obligatorio</p>}
       </Form.Group>
       <ReCAPTCHA
         sitekey="6Lfrn40lAAAAALBW2Uh5Fevhp_8D6qw4cPxTINzB"
@@ -110,6 +127,6 @@ export const ContactUs = () => {
         className="mb-3"
       />
       <input className="btn btn-primary mx-5" type="submit" value="Enviar" />
-      </Form>
-);
+    </Form>
+  );
 };
